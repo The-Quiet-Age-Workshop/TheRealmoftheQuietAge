@@ -27,17 +27,22 @@ max_monsters_by_floor = [
 ]
 
 item_chances: Dict[int, List[Tuple[Entity, int]]] = {
-    0: [(entity_factories.health_potion, 35), (entity_factories.knife, 25), (entity_factories.light_armour, 25), (entity_factories.light_shield, 25)],
-    2: [(entity_factories.confusion_scroll, 10), (entity_factories.shortblade, 10)],
-    4: [(entity_factories.lightning_scroll, 25), (entity_factories.medium_armour, 15), (entity_factories.medium_shield, 15)],
-    6: [(entity_factories.fireball_scroll, 25), (entity_factories.heavy_armour, 5), (entity_factories.heavy_shield, 5)],
+    0: [(entity_factories.health_potion, 35)],
+    2: [(entity_factories.knife, 30), (entity_factories.light_armour, 30), (entity_factories.light_shield, 30)],
+    3: [(entity_factories.shortblade, 25), (entity_factories.medium_armour, 25), (entity_factories.medium_shield, 25)],
+    4: [(entity_factories.heavy_armour, 20), (entity_factories.heavy_shield, 20)],
+    5: [(entity_factories.confusion_scroll, 15), (entity_factories.lightning_scroll, 15), (entity_factories.fireball_scroll, 15)],
 }
 
 enemy_chances: Dict[int, List[Tuple[Entity, int]]] = {
-    0: [(entity_factories.drekirsivilao, 80)],
-    3: [(entity_factories.ormersivilao, 15)],
-    5: [(entity_factories.ormersivilao, 30)],
-    7: [(entity_factories.ormersivilao, 60)],
+    0: [(entity_factories.drekirjalan, 80), (entity_factories.drekirjuln, 80)],
+    1: [(entity_factories.drekirfijal, 75), (entity_factories.drekirpura, 75)],
+    2: [(entity_factories.drekirkal, 70)],
+    3: [(entity_factories.drekirsivilao, 70)],
+    4: [(entity_factories.ormerjalan, 65), (entity_factories.ormerjuln, 65)],
+    5: [(entity_factories.ormerfijal, 60), (entity_factories.ormerpura, 60)],
+    6: [(entity_factories.ormerkal, 55)],
+    7: [(entity_factories.ormersivilao, 50)],
 }
 
 

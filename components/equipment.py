@@ -88,10 +88,10 @@ class Equipment(BaseComponent):
         else:
             slot = "armor"
         if (
-                    equippable_item.equippable
-                    and equippable_item.equippable.equipment_type == EquipmentType.SHIELD
-                ):
-                    slot = "shield"
+            equippable_item.equippable
+            and equippable_item.equippable.equipment_type == EquipmentType.SHIELD
+        ):
+            slot = "shield"
 
         if getattr(self, slot) == equippable_item:
             self.unequip_from_slot(slot, add_message)

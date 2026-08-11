@@ -13,9 +13,64 @@ player = Actor(
     name="Player",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=20, base_defense=10, base_power=12),
+    fighter=Fighter(hp=20, base_defense=10, base_power=11),
     inventory=Inventory(capacity=26),
     level=Level(level_up_base=200),
+)
+
+drekirfijal = Actor(
+    char="d",
+    color=(50, 100, 0),
+    name="Temperate Drek",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(hp=20, base_defense=10, base_power=11),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=50),
+)
+
+drekirpura = Actor(
+    char="d",
+    color=(50, 50, 0),
+    name="Arid Drek",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(hp=20, base_defense=10, base_power=11),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=50),
+)
+
+drekirjalan = Actor(
+    char="d",
+    color=(100, 100, 50),
+    name="Alpine Drek",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(hp=15, base_defense=10, base_power=10),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=25),
+)
+
+drekirjuln = Actor(
+    char="d",
+    color=(0, 100, 0),
+    name="Tropical Drek",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(hp=15, base_defense=10, base_power=10),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=25),
+)
+
+drekirkal = Actor(
+    char="D",
+    color=(100, 100, 100),
+    name="Arctic Drek",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(hp=25, base_defense=10, base_power=12),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=75),
 )
 
 drekirsivilao = Actor(
@@ -28,10 +83,66 @@ drekirsivilao = Actor(
     inventory=Inventory(capacity=0),
     level=Level(xp_given=75),
 )
+
+ormerfijal = Actor(
+    char="O",
+    color=(50, 50, 0),
+    name="Temperate Orm",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(hp=45, base_defense=10, base_power=12),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=75),
+)
+
+ormerpura = Actor(
+    char="O",
+    color=(50, 50, 0),
+    name="Arid Orm",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(hp=45, base_defense=10, base_power=12),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=75),
+)
+
+ormerjalan = Actor(
+    char="O",
+    color=(100, 100, 50),
+    name="Alpine Orm",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(hp=40, base_defense=10, base_power=11),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=50),
+)
+
+ormerjuln = Actor(
+    char="O",
+    color=(0, 100, 0),
+    name="Tropical Orm",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(hp=40, base_defense=10, base_power=11),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=50),
+)
+
+ormerkal = Actor(
+    char="O",
+    color=(100, 100, 100),
+    name="Arctic Orm",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(hp=50, base_defense=10, base_power=13),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=100),
+)
+
 ormersivilao = Actor(
     char="O",
     color=(100, 100, 0),
-    name="Orm",
+    name="Caste Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
     fighter=Fighter(hp=50, base_defense=11, base_power=13),
@@ -65,10 +176,17 @@ lightning_scroll = Item(
 )
 
 knife = Item(
-    char="/", color=(100, 100, 100), name="Knife", equippable=equippable.Knife()
+    char="/",
+    color=(100, 100, 100),
+    name="Knife",
+    equippable=equippable.Knife()
 )
 
-shortblade = Item(char="/", color=(100, 100, 100), name="Sword", equippable=equippable.ShortBlade())
+shortblade = Item(
+    char="/",
+    color=(100, 100, 100),
+    name="Shortblade",
+    equippable=equippable.ShortBlade())
 
 light_armour = Item(
     char="[",
@@ -85,6 +203,7 @@ medium_armour = Item(
 )
 
 heavy_armour = Item(
+    char="[",
     color=(100, 100, 100),
     name="Heavy Armour",
     equippable=equippable.HeavyArmour(),
@@ -105,6 +224,7 @@ medium_shield = Item(
 )
 
 heavy_shield = Item(
+    char="[",
     color=(100, 100, 100),
     name="Heavy Shield",
     equippable=equippable.HeavyShield(),
