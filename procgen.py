@@ -27,10 +27,10 @@ max_monsters_by_floor = [
 ]
 
 item_chances: Dict[int, List[Tuple[Entity, int]]] = {
-    0: [(entity_factories.health_potion, 35)],
-    2: [(entity_factories.confusion_scroll, 10)],
-    4: [(entity_factories.lightning_scroll, 25), (entity_factories.sword, 5)],
-    6: [(entity_factories.fireball_scroll, 25), (entity_factories.chain_mail, 15)],
+    0: [(entity_factories.health_potion, 35), (entity_factories.knife, 25), (entity_factories.light_armour, 25), (entity_factories.light_shield, 25)],
+    2: [(entity_factories.confusion_scroll, 10), (entity_factories.shortblade, 10)],
+    4: [(entity_factories.lightning_scroll, 25), (entity_factories.medium_armour, 15), (entity_factories.medium_shield, 15)],
+    6: [(entity_factories.fireball_scroll, 25), (entity_factories.heavy_armour, 5), (entity_factories.heavy_shield, 5)],
 }
 
 enemy_chances: Dict[int, List[Tuple[Entity, int]]] = {

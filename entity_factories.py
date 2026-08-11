@@ -26,7 +26,7 @@ drekirsivilao = Actor(
     equipment=Equipment(),
     fighter=Fighter(hp=25, base_defense=11, base_power=12),
     inventory=Inventory(capacity=0),
-    level=Level(xp_given=35),
+    level=Level(xp_given=75),
 )
 ormersivilao = Actor(
     char="O",
@@ -64,19 +64,48 @@ lightning_scroll = Item(
     consumable=consumable.LightningDamageConsumable(damage=20, maximum_range=5),
 )
 
-dagger = Item(
-    char="/", color=(0, 191, 255), name="Dagger", equippable=equippable.Dagger()
+knife = Item(
+    char="/", color=(100, 100, 100), name="Knife", equippable=equippable.Knife()
 )
 
-sword = Item(char="/", color=(0, 191, 255), name="Sword", equippable=equippable.Sword())
+shortblade = Item(char="/", color=(100, 100, 100), name="Sword", equippable=equippable.ShortBlade())
 
-leather_armor = Item(
+light_armour = Item(
     char="[",
-    color=(139, 69, 19),
-    name="Leather Armor",
-    equippable=equippable.LeatherArmor(),
+    color=(100, 100, 0),
+    name="Light Armour",
+    equippable=equippable.LightArmour(),
 )
 
-chain_mail = Item(
-    char="[", color=(139, 69, 19), name="Chain Mail", equippable=equippable.ChainMail()
+medium_armour = Item(
+    char="[",
+    color=(100, 100, 50),
+    name="Medium Armour",
+    equippable=equippable.MediumArmour(),
+)
+
+heavy_armour = Item(
+    color=(100, 100, 100),
+    name="Heavy Armour",
+    equippable=equippable.HeavyArmour(),
+)
+
+light_shield = Item(
+    char="[",
+    color=(100, 100, 0),
+    name="Light Shield",
+    equippable=equippable.LightShield(),
+)
+
+medium_shield = Item(
+    char="[",
+    color=(100, 100, 50),
+    name="Medium Shield",
+    equippable=equippable.MediumShield(),
+)
+
+heavy_shield = Item(
+    color=(100, 100, 100),
+    name="Heavy Shield",
+    equippable=equippable.HeavyShield(),
 )
