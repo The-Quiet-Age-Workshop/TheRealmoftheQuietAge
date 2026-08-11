@@ -1,11 +1,12 @@
+#!/usr/bin/env python3
 import traceback
 
 import tcod
 
 import color
 import exceptions
-import input_handlers
 import setup_game
+import input_handlers
 
 
 def save_game(handler: input_handlers.BaseEventHandler, filename: str) -> None:
@@ -29,7 +30,7 @@ def main() -> None:
         screen_width,
         screen_height,
         tileset=tileset,
-        title="The Realm of the Quiet Age",
+        title="Yet Another Roguelike Tutorial",
         vsync=True,
     ) as context:
         root_console = tcod.Console(screen_width, screen_height, order="F")
@@ -59,7 +60,6 @@ def main() -> None:
             save_game(handler, "savegame.sav")
             raise
 
-            events = tcod.event.wait()
 
 if __name__ == "__main__":
     main()
