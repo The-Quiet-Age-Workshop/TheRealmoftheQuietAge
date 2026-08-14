@@ -48,10 +48,31 @@ class Engine:
 
         self.message_log.render(console=console, x=21, y=45, width=40, height=5)
 
-        render_functions.render_bar(
+        render_functions.render_food_bar(
+            console=console,
+            current_value=self.player.fighter.mana,
+            maximum_value=self.player.fighter.max_mana,
+            total_width=20,
+        )
+
+        render_functions.render_hp_bar(
             console=console,
             current_value=self.player.fighter.hp,
             maximum_value=self.player.fighter.max_hp,
+            total_width=20,
+        )
+
+        render_functions.render_mana_bar(
+            console=console,
+            current_value=self.player.fighter.mana,
+            maximum_value=self.player.fighter.max_mana,
+            total_width=20,
+        )
+
+        render_functions.render_thirst_bar(
+            console=console,
+            current_value=self.player.fighter.mana,
+            maximum_value=self.player.fighter.max_mana,
             total_width=20,
         )
 

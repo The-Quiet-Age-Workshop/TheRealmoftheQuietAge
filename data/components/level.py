@@ -74,7 +74,8 @@ class Level(BaseComponent):
         self.increase_level()
 
     def increase_mana(self, amount: int = 1) -> None:
-        self.parent.fighter.base_mana += amount
+        self.parent.fighter.max_mana += amount
+        self.parent.fighter.mana += amount
 
         self.engine.message_log.add_message("You feel wiser!")
 

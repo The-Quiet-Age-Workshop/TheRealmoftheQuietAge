@@ -234,9 +234,6 @@ class CharacterScreenEventHandler(AskUserEventHandler):
         console.print(
             x=x + 1, y=y + 5, string=f"Defense: {self.engine.player.fighter.defense}"
         )
-        console.print(
-            x=x + 1, y=y + 6, string=f"Mana Charge: {self.engine.player.fighter.mana}"
-        )
 
 
 class LevelUpEventHandler(AskUserEventHandler):
@@ -282,7 +279,7 @@ class LevelUpEventHandler(AskUserEventHandler):
         console.print(
             x=x + 1,
             y=7,
-            string=f"d) Wisdom (+1 mana charge, from {self.engine.player.fighter.power})",
+            string=f"d) Wisdom (+1 mana charge, from {self.engine.player.fighter.max_mana})",
         )
 
     def ev_keydown(self, event: tcod.event.KeyDown) -> Optional[ActionOrHandler]:
@@ -290,7 +287,7 @@ class LevelUpEventHandler(AskUserEventHandler):
         key = event.sym
         index = key - tcod.event.K_a
 
-        if 0 <= index <= 2:
+        if 0 <= index <= 3:
             if index == 0:
                 player.level.increase_defense()
             if index == 1:

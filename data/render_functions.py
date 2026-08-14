@@ -20,23 +20,69 @@ def get_names_at_location(x: int, y: int, game_map: GameMap) -> str:
 
     return names.capitalize()
 
-
-def render_bar(
+def render_food_bar(
     console: Console, current_value: int, maximum_value: int, total_width: int
 ) -> None:
     bar_width = int(float(current_value) / maximum_value * total_width)
 
-    console.draw_rect(x=0, y=45, width=20, height=1, ch=1, bg=color.bar_empty)
+    console.draw_rect(x=0, y=42, width=20, height=1, ch=1, bg=color.food_bar_empty)
 
     if bar_width > 0:
         console.draw_rect(
-            x=0, y=45, width=bar_width, height=1, ch=1, bg=color.bar_filled
+            x=0, y=42, width=bar_width, height=1, ch=1, bg=color.food_bar_filled
         )
 
     console.print(
-        x=1, y=45, string=f"HP: {current_value}/{maximum_value}", fg=color.bar_text
+        x=1, y=42, string=f"Hunger: {current_value}/{maximum_value}", fg=color.bar_text
     )
 
+def render_hp_bar(
+    console: Console, current_value: int, maximum_value: int, total_width: int
+) -> None:
+    bar_width = int(float(current_value) / maximum_value * total_width)
+
+    console.draw_rect(x=0, y=46, width=20, height=1, ch=1, bg=color.hp_bar_empty)
+
+    if bar_width > 0:
+        console.draw_rect(
+            x=0, y=46, width=bar_width, height=1, ch=1, bg=color.hp_bar_filled
+        )
+
+    console.print(
+        x=1, y=46, string=f"HP: {current_value}/{maximum_value}", fg=color.bar_text
+    )
+
+def render_mana_bar(
+    console: Console, current_value: int, maximum_value: int, total_width: int
+) -> None:
+    bar_width = int(float(current_value) / maximum_value * total_width)
+
+    console.draw_rect(x=0, y=40, width=20, height=1, ch=1, bg=color.mana_bar_empty)
+
+    if bar_width > 0:
+        console.draw_rect(
+            x=0, y=40, width=bar_width, height=1, ch=1, bg=color.mana_bar_filled
+        )
+
+    console.print(
+        x=1, y=40, string=f"Mana Charge: {current_value}/{maximum_value}", fg=color.bar_text
+    )
+
+def render_thirst_bar(
+    console: Console, current_value: int, maximum_value: int, total_width: int
+) -> None:
+    bar_width = int(float(current_value) / maximum_value * total_width)
+
+    console.draw_rect(x=0, y=44, width=20, height=1, ch=1, bg=color.thirst_bar_empty)
+
+    if bar_width > 0:
+        console.draw_rect(
+            x=0, y=44, width=bar_width, height=1, ch=1, bg=color.thirst_bar_filled
+        )
+
+    console.print(
+        x=1, y=44, string=f"Thirst: {current_value}/{maximum_value}", fg=color.bar_text
+    )
 
 def render_dungeon_level(
     console: Console, dungeon_level: int, location: Tuple[int, int]
