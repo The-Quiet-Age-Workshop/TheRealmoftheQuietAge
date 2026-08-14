@@ -234,6 +234,9 @@ class CharacterScreenEventHandler(AskUserEventHandler):
         console.print(
             x=x + 1, y=y + 5, string=f"Defense: {self.engine.player.fighter.defense}"
         )
+        console.print(
+            x=x + 1, y=y + 6, string=f"Mana Charge: {self.engine.player.fighter.mana}"
+        )
 
 
 class LevelUpEventHandler(AskUserEventHandler):
@@ -251,7 +254,7 @@ class LevelUpEventHandler(AskUserEventHandler):
             x=x,
             y=0,
             width=35,
-            height=8,
+            height=10,
             title=self.TITLE,
             clear=True,
             fg=(255, 255, 255),
@@ -264,17 +267,22 @@ class LevelUpEventHandler(AskUserEventHandler):
         console.print(
             x=x + 1,
             y=4,
-            string=f"a) Constitution (+20 HP, from {self.engine.player.fighter.max_hp})",
+            string=f"a) Agility (+1 defense, from {self.engine.player.fighter.defense})",
         )
         console.print(
             x=x + 1,
             y=5,
-            string=f"b) Strength (+1 attack, from {self.engine.player.fighter.power})",
+            string=f"b) Perception (+5 HP, from {self.engine.player.fighter.max_hp})",
         )
         console.print(
             x=x + 1,
             y=6,
-            string=f"c) Agility (+1 defense, from {self.engine.player.fighter.defense})",
+            string=f"c) Strength (+1 attack, from {self.engine.player.fighter.power})",
+        )
+        console.print(
+            x=x + 1,
+            y=7,
+            string=f"d) Wisdom (+1 mana charge, from {self.engine.player.fighter.power})",
         )
 
     def ev_keydown(self, event: tcod.event.KeyDown) -> Optional[ActionOrHandler]:
@@ -284,11 +292,13 @@ class LevelUpEventHandler(AskUserEventHandler):
 
         if 0 <= index <= 2:
             if index == 0:
-                player.level.increase_max_hp()
-            elif index == 1:
+                player.level.increase_defense()
+            if index == 1:
+                player.level.increase_accuracy()
+            elif index == 2:
                 player.level.increase_power()
             else:
-                player.level.increase_defense()
+                player.level.increase_mana()
         else:
             self.engine.message_log.add_message("Invalid entry.", color.invalid)
 

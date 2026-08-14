@@ -13,7 +13,7 @@ player = Actor(
     name="Player",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=20, base_defense=10, base_power=11),
+    fighter=Fighter(hp=20, base_defense=10, base_power=11, base_mana=2),
     inventory=Inventory(capacity=7),
     level=Level(level_up_base=200),
 )
@@ -24,8 +24,8 @@ drekirfijal = Actor(
     name="Temperate Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=20, base_defense=10, base_power=11),
-    inventory=Inventory(capacity=0),
+    fighter=Fighter(hp=20, base_defense=10, base_power=11, base_mana=2),
+    inventory=Inventory(capacity=7),
     level=Level(xp_given=50),
 )
 
@@ -35,8 +35,8 @@ drekirpura = Actor(
     name="Arid Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=20, base_defense=10, base_power=11),
-    inventory=Inventory(capacity=0),
+    fighter=Fighter(hp=20, base_defense=10, base_power=11, base_mana=2),
+    inventory=Inventory(capacity=7),
     level=Level(xp_given=50),
 )
 
@@ -46,8 +46,8 @@ drekirjalan = Actor(
     name="Alpine Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=15, base_defense=10, base_power=10),
-    inventory=Inventory(capacity=0),
+    fighter=Fighter(hp=15, base_defense=10, base_power=10, base_mana=2),
+    inventory=Inventory(capacity=7),
     level=Level(xp_given=25),
 )
 
@@ -57,8 +57,8 @@ drekirjuln = Actor(
     name="Tropical Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=15, base_defense=10, base_power=10),
-    inventory=Inventory(capacity=0),
+    fighter=Fighter(hp=15, base_defense=10, base_power=10, base_mana=2),
+    inventory=Inventory(capacity=7),
     level=Level(xp_given=25),
 )
 
@@ -68,8 +68,8 @@ drekirkal = Actor(
     name="Arctic Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=25, base_defense=10, base_power=12),
-    inventory=Inventory(capacity=0),
+    fighter=Fighter(hp=25, base_defense=10, base_power=12, base_mana=2),
+    inventory=Inventory(capacity=7),
     level=Level(xp_given=75),
 )
 
@@ -79,8 +79,8 @@ drekirsivilao = Actor(
     name="Dralk",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=25, base_defense=11, base_power=12),
-    inventory=Inventory(capacity=0),
+    fighter=Fighter(hp=25, base_defense=11, base_power=12, base_mana=2),
+    inventory=Inventory(capacity=7),
     level=Level(xp_given=75),
 )
 
@@ -90,8 +90,8 @@ ormerfijal = Actor(
     name="Temperate Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=45, base_defense=10, base_power=12),
-    inventory=Inventory(capacity=0),
+    fighter=Fighter(hp=45, base_defense=10, base_power=12, base_mana=2),
+    inventory=Inventory(capacity=7),
     level=Level(xp_given=75),
 )
 
@@ -101,8 +101,8 @@ ormerpura = Actor(
     name="Arid Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=45, base_defense=10, base_power=12),
-    inventory=Inventory(capacity=0),
+    fighter=Fighter(hp=45, base_defense=10, base_power=12, base_mana=2),
+    inventory=Inventory(capacity=7),
     level=Level(xp_given=75),
 )
 
@@ -112,8 +112,8 @@ ormerjalan = Actor(
     name="Alpine Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=40, base_defense=10, base_power=11),
-    inventory=Inventory(capacity=0),
+    fighter=Fighter(hp=40, base_defense=10, base_power=11, base_mana=2),
+    inventory=Inventory(capacity=7),
     level=Level(xp_given=50),
 )
 
@@ -123,8 +123,8 @@ ormerjuln = Actor(
     name="Tropical Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=40, base_defense=10, base_power=11),
-    inventory=Inventory(capacity=0),
+    fighter=Fighter(hp=40, base_defense=10, base_power=11, base_mana=2),
+    inventory=Inventory(capacity=7),
     level=Level(xp_given=50),
 )
 
@@ -134,8 +134,8 @@ ormerkal = Actor(
     name="Arctic Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=50, base_defense=10, base_power=13),
-    inventory=Inventory(capacity=0),
+    fighter=Fighter(hp=50, base_defense=10, base_power=13, base_mana=2),
+    inventory=Inventory(capacity=7),
     level=Level(xp_given=100),
 )
 
@@ -145,8 +145,8 @@ ormersivilao = Actor(
     name="Caste Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(hp=50, base_defense=11, base_power=13),
-    inventory=Inventory(capacity=0),
+    fighter=Fighter(hp=50, base_defense=11, base_power=13, base_mana=2),
+    inventory=Inventory(capacity=7),
     level=Level(xp_given=100),
 )
 
