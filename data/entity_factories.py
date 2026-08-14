@@ -14,7 +14,7 @@ player = Actor(
     ai_cls=HostileEnemy,
     equipment=Equipment(),
     fighter=Fighter(hp=20, base_defense=10, base_power=11),
-    inventory=Inventory(capacity=26),
+    inventory=Inventory(capacity=7),
     level=Level(level_up_base=200),
 )
 
@@ -162,11 +162,17 @@ fireball_scroll = Item(
     name="Fireball Scroll",
     consumable=consumable.FireballDamageConsumable(damage=12, radius=3),
 )
-health_potion = Item(
+rations = Item(
     char="!",
-    color=(127, 0, 255),
-    name="Health Potion",
-    consumable=consumable.HealingConsumable(amount=4),
+    color=(127, 255, 150),
+    name="Rations",
+    consumable=consumable.HealingConsumable(amount=1),
+)
+bandages = Item(
+    char="~",
+    color=(255, 127, 150),
+    name="Bandages",
+    consumable=consumable.HealingConsumable(amount=2),
 )
 lightning_scroll = Item(
     char="~",
@@ -182,10 +188,22 @@ knife = Item(
     equippable=equippable.Knife()
 )
 
+hatchet = Item(
+    char="/",
+    color=(100, 100, 100),
+    name="Hatchet",
+    equippable=equippable.Hatchet())
+
+club = Item(
+    char="/",
+    color=(100, 100, 100),
+    name="Club",
+    equippable=equippable.Club())
+
 shortblade = Item(
     char="/",
     color=(100, 100, 100),
-    name="Shortblade",
+    name="Short Blade",
     equippable=equippable.ShortBlade())
 
 light_armour = Item(

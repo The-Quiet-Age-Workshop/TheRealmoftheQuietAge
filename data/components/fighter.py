@@ -56,7 +56,7 @@ class Fighter(BaseComponent):
             death_message = "You have perished!"
             death_message_color = color.player_die
         else:
-            death_message = f"{self.parent.name} is dead!"
+            death_message = f"{self.parent.name} is slain!"
             death_message_color = color.enemy_die
 
         self.parent.char = "%"
