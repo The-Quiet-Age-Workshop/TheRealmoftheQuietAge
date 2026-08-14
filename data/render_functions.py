@@ -25,15 +25,15 @@ def render_food_bar(
 ) -> None:
     bar_width = int(float(current_value) / maximum_value * total_width)
 
-    console.draw_rect(x=0, y=42, width=20, height=1, ch=1, bg=color.food_bar_empty)
+    console.draw_rect(x=0, y=43, width=20, height=1, ch=1, bg=color.food_bar_empty)
 
     if bar_width > 0:
         console.draw_rect(
-            x=0, y=42, width=bar_width, height=1, ch=1, bg=color.food_bar_filled
+            x=0, y=43, width=bar_width, height=1, ch=1, bg=color.food_bar_filled
         )
 
     console.print(
-        x=1, y=42, string=f"Hunger: {current_value}/{maximum_value}", fg=color.bar_text
+        x=1, y=43, string=f"Hunger: {current_value}/{maximum_value}", fg=color.bar_text
     )
 
 def render_hp_bar(
@@ -41,15 +41,15 @@ def render_hp_bar(
 ) -> None:
     bar_width = int(float(current_value) / maximum_value * total_width)
 
-    console.draw_rect(x=0, y=46, width=20, height=1, ch=1, bg=color.hp_bar_empty)
+    console.draw_rect(x=0, y=45, width=20, height=1, ch=1, bg=color.hp_bar_empty)
 
     if bar_width > 0:
         console.draw_rect(
-            x=0, y=46, width=bar_width, height=1, ch=1, bg=color.hp_bar_filled
+            x=0, y=45, width=bar_width, height=1, ch=1, bg=color.hp_bar_filled
         )
 
     console.print(
-        x=1, y=46, string=f"HP: {current_value}/{maximum_value}", fg=color.bar_text
+        x=1, y=45, string=f"HP: {current_value}/{maximum_value}", fg=color.bar_text
     )
 
 def render_mana_bar(
@@ -57,15 +57,31 @@ def render_mana_bar(
 ) -> None:
     bar_width = int(float(current_value) / maximum_value * total_width)
 
-    console.draw_rect(x=0, y=40, width=20, height=1, ch=1, bg=color.mana_bar_empty)
+    console.draw_rect(x=0, y=41, width=20, height=1, ch=1, bg=color.mana_bar_empty)
 
     if bar_width > 0:
         console.draw_rect(
-            x=0, y=40, width=bar_width, height=1, ch=1, bg=color.mana_bar_filled
+            x=0, y=41, width=bar_width, height=1, ch=1, bg=color.mana_bar_filled
         )
 
     console.print(
-        x=1, y=40, string=f"Mana Charge: {current_value}/{maximum_value}", fg=color.bar_text
+        x=1, y=41, string=f"Mana Charge: {current_value}/{maximum_value}", fg=color.bar_text
+    )
+
+def render_sleep_bar(
+    console: Console, current_value: int, maximum_value: int, total_width: int
+) -> None:
+    bar_width = int(float(current_value) / maximum_value * total_width)
+
+    console.draw_rect(x=0, y=42, width=20, height=1, ch=1, bg=color.sleep_bar_empty)
+
+    if bar_width > 0:
+        console.draw_rect(
+            x=0, y=42, width=bar_width, height=1, ch=1, bg=color.sleep_bar_filled
+        )
+
+    console.print(
+        x=1, y=42, string=f"Sleep: {current_value}/{maximum_value}", fg=color.bar_text
     )
 
 def render_thirst_bar(

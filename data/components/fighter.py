@@ -13,13 +13,29 @@ if TYPE_CHECKING:
 class Fighter(BaseComponent):
     parent: Actor
 
-    def __init__(self, hp: int, mana: int, base_defense: int, base_power: int):
+    def __init__(self, food: int, hp: int, mana: int, sleep: int, thirst: int, base_defense: int, base_power: int):
+        self.max_food = food
+        self._food = food
         self.max_hp = hp
         self._hp = hp
         self.max_mana = mana
         self._mana = mana
+        self.max_sleep = sleep
+        self._sleep = sleep
+        self.max_thirst = thirst
+        self._thirst = thirst
         self.base_defense = base_defense
         self.base_power = base_power
+
+    @property
+    def food(self) -> int:
+        return self._food
+
+    @food.setter
+    def food(self, value: int) -> None:
+        self._food = max(0, min(value, self.max_food))
+        if self._food == 0 and self.parent.ai:
+            self.die()
 
     @property
     def hp(self) -> int:
@@ -42,6 +58,26 @@ class Fighter(BaseComponent):
     @mana.setter
     def mana(self, value: int) -> None:
         self._mana = max(0, min(value, self.max_mana))
+
+    @property
+    def sleep(self) -> int:
+        return self._sleep
+
+    @sleep.setter
+    def sleep(self, value: int) -> None:
+        self._sleep = max(0, min(value, self.max_sleep))
+        if self._sleep == 0 and self.parent.ai:
+            self.die()
+
+    @property
+    def thirst(self) -> int:
+        return self._thirst
+
+    @thirst.setter
+    def thirst(self, value: int) -> None:
+        self._thirst = max(0, min(value, self.max_thirst))
+        if self._thirst == 0 and self.parent.ai:
+            self.die()
 
     @property
     def power(self) -> int:

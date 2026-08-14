@@ -50,8 +50,8 @@ class Engine:
 
         render_functions.render_food_bar(
             console=console,
-            current_value=self.player.fighter.mana,
-            maximum_value=self.player.fighter.max_mana,
+            current_value=self.player.fighter.food,
+            maximum_value=self.player.fighter.max_food,
             total_width=20,
         )
 
@@ -69,10 +69,17 @@ class Engine:
             total_width=20,
         )
 
+        render_functions.render_sleep_bar(
+            console=console,
+            current_value=self.player.fighter.sleep,
+            maximum_value=self.player.fighter.max_sleep,
+            total_width=20,
+        )
+
         render_functions.render_thirst_bar(
             console=console,
-            current_value=self.player.fighter.mana,
-            maximum_value=self.player.fighter.max_mana,
+            current_value=self.player.fighter.thirst,
+            maximum_value=self.player.fighter.max_thirst,
             total_width=20,
         )
 
