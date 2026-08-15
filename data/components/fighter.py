@@ -131,5 +131,20 @@ class Fighter(BaseComponent):
 
         return amount_recovered
 
+    def rest(self, amount: int) -> int:
+        if self.hp == self.max_sleep:
+            return 0
+
+        new_sleep_value = self.sleep + amount
+
+        if new_sleep_value > self.max_sleep:
+            new_sleep_value = self.max_sleep
+
+        amount_rested = new_sleep_value - self.hp
+
+        self.hp = new_sleep_value
+
+        return amount_rested
+
     def take_damage(self, amount: int) -> None:
         self.hp -= amount

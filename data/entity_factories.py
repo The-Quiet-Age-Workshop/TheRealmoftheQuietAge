@@ -13,9 +13,53 @@ player = Actor(
     name="Player",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=10, base_power=11),
+    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=0, base_power=1),
     inventory=Inventory(capacity=7),
     level=Level(level_up_base=200),
+)
+
+bulverfijal = Actor(
+    char="B",
+    color=(50, 100, 0),
+    name="Temperate Bul",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(food=100, hp=15, mana=2, sleep=100, thirst=100, base_defense=0, base_power=8),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=50),
+)
+
+bulverkal = Actor(
+    char="B",
+    color=(100, 100, 100),
+    name="Arctic Bul",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=0, base_power=9),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=50),
+)
+
+bulverpura = Actor(
+    char="B",
+    color=(50, 50, 0),
+    name="Arid Bul",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(food=100, hp=15, mana=2, sleep=100, thirst=100, base_defense=0, base_power=8),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=50),
+)
+
+bulverjuln = Actor(
+    char="B",
+    color=(0, 100, 0),
+    name="Tropical Bul",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(food=100, hp=10, mana=2, sleep=100, thirst=100, base_defense=0, base_power=7),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=25),
 )
 
 drekirfijal = Actor(
@@ -24,7 +68,7 @@ drekirfijal = Actor(
     name="Temperate Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=10, base_power=11),
+    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=0, base_power=1),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=50),
 )
@@ -35,7 +79,7 @@ drekirpura = Actor(
     name="Arid Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=10, base_power=11),
+    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=0, base_power=1),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=50),
 )
@@ -46,7 +90,7 @@ drekirjalan = Actor(
     name="Alpine Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=15, mana=2, sleep=100, thirst=100, base_defense=10, base_power=10),
+    fighter=Fighter(food=100, hp=15, mana=2, sleep=100, thirst=100, base_defense=0, base_power=10),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=25),
 )
@@ -57,7 +101,7 @@ drekirjuln = Actor(
     name="Tropical Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=15, mana=2, sleep=100, thirst=100, base_defense=10, base_power=10),
+    fighter=Fighter(food=100, hp=15, mana=2, sleep=100, thirst=100, base_defense=0, base_power=10),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=25),
 )
@@ -68,7 +112,7 @@ drekirkal = Actor(
     name="Arctic Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=25, mana=2, sleep=100, thirst=100, base_defense=10, base_power=12),
+    fighter=Fighter(food=100, hp=25, mana=2, sleep=100, thirst=100, base_defense=0, base_power=2),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=75),
 )
@@ -79,7 +123,7 @@ drekirsivilao = Actor(
     name="Dralk",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=25, mana=2, sleep=100, thirst=100, base_defense=11, base_power=12),
+    fighter=Fighter(food=100, hp=25, mana=2, sleep=100, thirst=100, base_defense=11, base_power=2),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=75),
 )
@@ -90,7 +134,7 @@ ormerfijal = Actor(
     name="Temperate Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=45, mana=2, sleep=100, thirst=100, base_defense=10, base_power=12),
+    fighter=Fighter(food=100, hp=45, mana=2, sleep=100, thirst=100, base_defense=0, base_power=2),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=75),
 )
@@ -101,7 +145,7 @@ ormerpura = Actor(
     name="Arid Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=45, mana=2, sleep=100, thirst=100, base_defense=10, base_power=12),
+    fighter=Fighter(food=100, hp=45, mana=2, sleep=100, thirst=100, base_defense=0, base_power=2),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=75),
 )
@@ -112,7 +156,7 @@ ormerjalan = Actor(
     name="Alpine Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=40, mana=2, sleep=100, thirst=100, base_defense=10, base_power=11),
+    fighter=Fighter(food=100, hp=40, mana=2, sleep=100, thirst=100, base_defense=0, base_power=1),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=50),
 )
@@ -123,7 +167,7 @@ ormerjuln = Actor(
     name="Tropical Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=40, mana=2, sleep=100, thirst=100, base_defense=10, base_power=11),
+    fighter=Fighter(food=100, hp=40, mana=2, sleep=100, thirst=100, base_defense=0, base_power=1),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=50),
 )
@@ -134,7 +178,7 @@ ormerkal = Actor(
     name="Arctic Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=50, mana=2, sleep=100, thirst=100, base_defense=10, base_power=13),
+    fighter=Fighter(food=100, hp=50, mana=2, sleep=100, thirst=100, base_defense=0, base_power=13),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=100),
 )
@@ -148,6 +192,50 @@ ormersivilao = Actor(
     fighter=Fighter(food=100, hp=50, mana=2, sleep=100, thirst=100, base_defense=11, base_power=13),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=100),
+)
+
+tirndarfijal = Actor(
+    char="T",
+    color=(50, 100, 0),
+    name="Temperate Tirn",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=0, base_power=12),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=50),
+)
+
+tirndarkal = Actor(
+    char="T",
+    color=(100, 100, 100),
+    name="Arctic Tirn",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(food=100, hp=25, mana=2, sleep=100, thirst=100, base_defense=0, base_power=13),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=75),
+)
+
+tirndarpura = Actor(
+    char="T",
+    color=(50, 50, 0),
+    name="Arid Tirn",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=0, base_power=12),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=50),
+)
+
+tirndarklar = Actor(
+    char="T",
+    color=(100, 100, 50),
+    name="Alpine Tirn",
+    ai_cls=HostileEnemy,
+    equipment=Equipment(),
+    fighter=Fighter(food=100, hp=15, mana=2, sleep=100, thirst=100, base_defense=0, base_power=11),
+    inventory=Inventory(capacity=0),
+    level=Level(xp_given=25),
 )
 
 confusion_scroll = Item(
@@ -167,6 +255,12 @@ rations = Item(
     color=(127, 255, 150),
     name="Rations",
     consumable=consumable.HealingConsumable(amount=1),
+)
+blanket = Item(
+    char="~",
+    color=(255, 175, 150),
+    name="Blanket",
+    consumable=consumable.Bed(amount=100),
 )
 bandages = Item(
     char="~",

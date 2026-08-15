@@ -27,7 +27,7 @@ max_monsters_by_floor = [
 ]
 
 item_chances: Dict[int, List[Tuple[Entity, int]]] = {
-    0: [(entity_factories.bandages, 35), (entity_factories.rations, 35)],
+    0: [(entity_factories.bandages, 35), (entity_factories.blanket, 35), (entity_factories.rations, 35)],
     2: [(entity_factories.knife, 30), (entity_factories.light_armour, 30), (entity_factories.light_shield, 30)],
     3: [(entity_factories.hatchet, 25), (entity_factories.club, 25)],
     4: [(entity_factories.shortblade, 20), (entity_factories.medium_armour, 20), (entity_factories.medium_shield, 20)],
@@ -36,14 +36,15 @@ item_chances: Dict[int, List[Tuple[Entity, int]]] = {
 }
 
 enemy_chances: Dict[int, List[Tuple[Entity, int]]] = {
-    0: [(entity_factories.drekirjalan, 80), (entity_factories.drekirjuln, 80)],
-    1: [(entity_factories.drekirfijal, 75), (entity_factories.drekirpura, 75)],
-    2: [(entity_factories.drekirkal, 70)],
-    3: [(entity_factories.drekirsivilao, 70)],
-    4: [(entity_factories.ormerjalan, 65), (entity_factories.ormerjuln, 65)],
-    5: [(entity_factories.ormerfijal, 60), (entity_factories.ormerpura, 60)],
-    6: [(entity_factories.ormerkal, 55)],
-    7: [(entity_factories.ormersivilao, 50)],
+    0: [(entity_factories.bulverjuln, 95), (entity_factories.tirndarklar, 95)],
+    1: [(entity_factories.bulverfijal, 90), (entity_factories.bulverpura, 90), (entity_factories.tirndarfijal, 90), (entity_factories.tirndarpura, 90)],
+    2: [(entity_factories.bulverkal, 85), (entity_factories.tirndarkal, 85)],
+    3: [(entity_factories.drekirjalan, 80), (entity_factories.drekirjuln, 80)],
+    4: [(entity_factories.drekirfijal, 75), (entity_factories.drekirpura, 75)],
+    5: [(entity_factories.drekirkal, 70), (entity_factories.drekirsivilao, 70)],
+    6: [(entity_factories.ormerjalan, 65), (entity_factories.ormerjuln, 65)],
+    7: [(entity_factories.ormerfijal, 60), (entity_factories.ormerpura, 60)],
+    8: [(entity_factories.ormerkal, 55), (entity_factories.ormersivilao, 55)],
 }
 
 
@@ -86,7 +87,6 @@ def get_entities_at_random(
     )
 
     return chosen_entities
-
 
 class RectangularRoom:
     def __init__(self, x: int, y: int, width: int, height: int):
