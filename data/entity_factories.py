@@ -5,7 +5,7 @@ from components.fighter import Fighter
 from components.inventory import Inventory
 from components.level import Level
 from entity import Actor, Item
-
+import eldimor_names
 
 player = Actor(
     char="@",

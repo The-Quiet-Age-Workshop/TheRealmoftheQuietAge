@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import copy
 import math
+import eldimor_names
 from typing import Optional, Tuple, Type, TypeVar, TYPE_CHECKING, Union
 
 from render_order import RenderOrder
@@ -59,6 +60,7 @@ class Entity:
         clone.x = x
         clone.y = y
         clone.parent = gamemap
+        clone.name = eldimor_names.make_name()
         gamemap.entities.add(clone)
         return clone
 

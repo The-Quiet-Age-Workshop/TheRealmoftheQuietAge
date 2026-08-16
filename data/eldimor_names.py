@@ -24,6 +24,6 @@ if __name__ == '__main__':
     names = [make_name() for i in range(0,100)]
     for i, n in enumerate(names):
         if n in names[:i]:
-            repeats != 1
+            repeats += 1
         print(n)
     print(str(repeats) + ' repeats')
