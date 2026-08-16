@@ -116,6 +116,21 @@ class Fighter(BaseComponent):
 
         self.engine.player.level.add_xp(self.parent.level.xp_given)
 
+    def eat(self, amount: int) -> int:
+        if self.food == self.max_food:
+            return 0
+
+        new_food_value = self.hp + amount
+
+        if new_food_value > self.max_food:
+            new_food_value = self.max_food
+
+        amount_recovered = new_food_value - self.food
+
+        self.food = new_food_value
+
+        return amount_recovered
+
     def heal(self, amount: int) -> int:
         if self.hp == self.max_hp:
             return 0
@@ -132,7 +147,7 @@ class Fighter(BaseComponent):
         return amount_recovered
 
     def rest(self, amount: int) -> int:
-        if self.hp == self.max_sleep:
+        if self.sleep == self.max_sleep:
             return 0
 
         new_sleep_value = self.sleep + amount
@@ -140,9 +155,9 @@ class Fighter(BaseComponent):
         if new_sleep_value > self.max_sleep:
             new_sleep_value = self.max_sleep
 
-        amount_rested = new_sleep_value - self.hp
+        amount_rested = new_sleep_value - self.sleep
 
-        self.hp = new_sleep_value
+        self.sleep = new_sleep_value
 
         return amount_rested
 

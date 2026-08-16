@@ -39,6 +39,22 @@ class Consumable(BaseComponent):
         if isinstance(inventory, components.inventory.Inventory):
             inventory.items.remove(entity)
 
+class Food(Consumable):
+    def __init__(self, amount: int):
+        self.amount = amount
+
+    def activate(self, action: actions.ItemAction) -> None:
+        consumer = action.entity
+        amount_rested = consumer.fighter.eat(self.amount)
+
+        if amount_rested > 20:
+            self.engine.message_log.add_message(
+                f"You eat the {self.parent.name}, and recover {amount_rested} hunger!",
+                color.rest_recovered,
+            )
+        else:
+            raise Impossible(f"You're not hungry!")
+
 class Bed(Consumable):
     def __init__(self, amount: int):
         self.amount = amount
@@ -47,13 +63,13 @@ class Bed(Consumable):
         consumer = action.entity
         amount_rested = consumer.fighter.rest(self.amount)
 
-        if amount_rested < 20:
+        if amount_rested > 20:
             self.engine.message_log.add_message(
                 f"You rest in the {self.parent.name}, and recover {amount_rested} sleep!",
                 color.rest_recovered,
             )
         else:
-            raise Impossible(f"Your not tired!")
+            raise Impossible(f"You're not tired!")
 
 class ConfusionConsumable(Consumable):
     def __init__(self, number_of_turns: int):

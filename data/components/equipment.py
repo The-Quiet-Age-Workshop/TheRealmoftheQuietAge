@@ -47,21 +47,6 @@ class Equipment(BaseComponent):
 
         return bonus
 
-    @property
-    def mana_bonus(self) -> int:
-        bonus = 0
-
-        if self.weapon is not None and self.weapon.equippable is not None:
-            bonus += self.weapon.equippable.mana_bonus
-
-        if self.armor is not None and self.armor.equippable is not None:
-            bonus += self.armor.equippable.mana_bonus
-
-        if self.shield is not None and self.shield.equippable is not None:
-            bonus += self.shield.equippable.mana_bonus
-
-        return bonus
-
     def item_is_equipped(self, item: Item) -> bool:
         return self.weapon == item or self.armor == item or self.shield == item
 

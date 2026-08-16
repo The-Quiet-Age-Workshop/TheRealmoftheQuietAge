@@ -254,7 +254,7 @@ rations = Item(
     char="!",
     color=(127, 255, 150),
     name="Rations",
-    consumable=consumable.HealingConsumable(amount=1),
+    consumable=consumable.Food(amount=100),
 )
 blanket = Item(
     char="~",
