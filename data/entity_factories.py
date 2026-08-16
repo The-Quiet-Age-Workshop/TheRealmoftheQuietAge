@@ -13,7 +13,7 @@ player = Actor(
     name="Player",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=0, base_power=1),
+    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=10, base_power=1),
     inventory=Inventory(capacity=7),
     level=Level(level_up_base=200),
 )
@@ -68,7 +68,7 @@ drekirfijal = Actor(
     name="Temperate Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=0, base_power=1),
+    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=10, base_power=4),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=50),
 )
@@ -79,7 +79,7 @@ drekirpura = Actor(
     name="Arid Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=0, base_power=1),
+    fighter=Fighter(food=100, hp=20, mana=2, sleep=100, thirst=100, base_defense=10, base_power=4),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=50),
 )
@@ -90,7 +90,7 @@ drekirjalan = Actor(
     name="Alpine Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=15, mana=2, sleep=100, thirst=100, base_defense=0, base_power=10),
+    fighter=Fighter(food=100, hp=15, mana=2, sleep=100, thirst=100, base_defense=10, base_power=3),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=25),
 )
@@ -101,7 +101,7 @@ drekirjuln = Actor(
     name="Tropical Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=15, mana=2, sleep=100, thirst=100, base_defense=0, base_power=10),
+    fighter=Fighter(food=100, hp=15, mana=2, sleep=100, thirst=100, base_defense=10, base_power=3),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=25),
 )
@@ -112,7 +112,7 @@ drekirkal = Actor(
     name="Arctic Drek",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=25, mana=2, sleep=100, thirst=100, base_defense=0, base_power=2),
+    fighter=Fighter(food=100, hp=25, mana=2, sleep=100, thirst=100, base_defense=10, base_power=5),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=75),
 )
@@ -123,7 +123,7 @@ drekirsivilao = Actor(
     name="Dralk",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=25, mana=2, sleep=100, thirst=100, base_defense=11, base_power=2),
+    fighter=Fighter(food=100, hp=25, mana=2, sleep=100, thirst=100, base_defense=11, base_power=5),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=75),
 )
@@ -134,7 +134,7 @@ ormerfijal = Actor(
     name="Temperate Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=45, mana=2, sleep=100, thirst=100, base_defense=0, base_power=2),
+    fighter=Fighter(food=100, hp=45, mana=2, sleep=100, thirst=100, base_defense=10, base_power=8),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=75),
 )
@@ -145,7 +145,7 @@ ormerpura = Actor(
     name="Arid Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=45, mana=2, sleep=100, thirst=100, base_defense=0, base_power=2),
+    fighter=Fighter(food=100, hp=45, mana=2, sleep=100, thirst=100, base_defense=10, base_power=8),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=75),
 )
@@ -156,7 +156,7 @@ ormerjalan = Actor(
     name="Alpine Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=40, mana=2, sleep=100, thirst=100, base_defense=0, base_power=1),
+    fighter=Fighter(food=100, hp=40, mana=2, sleep=100, thirst=100, base_defense=10, base_power=7),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=50),
 )
@@ -167,7 +167,7 @@ ormerjuln = Actor(
     name="Tropical Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=40, mana=2, sleep=100, thirst=100, base_defense=0, base_power=1),
+    fighter=Fighter(food=100, hp=40, mana=2, sleep=100, thirst=100, base_defense=10, base_power=7),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=50),
 )
@@ -178,7 +178,7 @@ ormerkal = Actor(
     name="Arctic Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=50, mana=2, sleep=100, thirst=100, base_defense=0, base_power=13),
+    fighter=Fighter(food=100, hp=50, mana=2, sleep=100, thirst=100, base_defense=10, base_power=9),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=100),
 )
@@ -189,7 +189,7 @@ ormersivilao = Actor(
     name="Caste Orm",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
-    fighter=Fighter(food=100, hp=50, mana=2, sleep=100, thirst=100, base_defense=11, base_power=13),
+    fighter=Fighter(food=100, hp=50, mana=2, sleep=100, thirst=100, base_defense=11, base_power=9),
     inventory=Inventory(capacity=7),
     level=Level(xp_given=100),
 )
