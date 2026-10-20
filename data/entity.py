@@ -9,6 +9,7 @@ from render_order import RenderOrder
 
 if TYPE_CHECKING:
     from components.ai import BaseAI
+    from components.breed import Breed
     from components.consumable import Consumable
     from components.equipment import Equipment
     from components.equippable import Equippable
@@ -97,6 +98,7 @@ class Actor(Entity):
         color: Tuple[int, int, int] = (255, 255, 255),
         name: str = "<Unnamed>",
         ai_cls: Type[BaseAI],
+        breed: Type[Breed],
         equipment: Equipment,
         fighter: Fighter,
         inventory: Inventory,
@@ -113,6 +115,7 @@ class Actor(Entity):
         )
 
         self.ai: Optional[BaseAI] = ai_cls(self)
+        self.breed: Optional[Breed] = breed(self)
 
         self.equipment: Equipment = equipment
         self.equipment.parent = self
